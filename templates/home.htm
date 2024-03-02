@@ -1,0 +1,42 @@
+<!DOCTYP html>
+<html>
+  <head>
+    <title>
+      Home Page
+    </title>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 16px;    
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">  
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Site</h1>
+      <img id="banner" class="img-fluid" src="https://img.freepik.com/free-psd/digital-marketing-facebook-banner-template_237398-233.jpg?w=1380&t=st=1709369627~exp=1709370227~hmac=c3c52b3bbb900a220b9c5b5627e8f82d6e9a223c9314631805befc1fa5b54b8b">
+      <h2 class="text-center mt-2 mb-4">About {{company_name}} Site</h2>  
+  <p class="lead">
+            Digital marketing is the use of websites, apps, mobile devices, social media, search engines, and other digital means to promote and sell products and services.
+
+            Digital marketing involves many of the same principles as traditional marketing and is often considered an additional way for companies to approach consumers and understand their behavior. Companies often combine traditional and digital marketing techniques in their strategies. But digital marketing also comes with its own set of challenges. Digital marketing started to become popular with the widespread adoption of the internet in the 1990s.
+    </p>
+    
+      <h2 class="text-center mt-2 mb-4">open positions</h2>  
+      <p>
+        {% for job in jobs %}
+         {% include 'jobitem.htm' %}
+        {% endfor %}
+      </p>
+      <div class="text-center">  
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+      <p class="mt-4">Copyright 2022, Alaa</p>
+      </div>
+  </body>
+</html>
