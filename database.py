@@ -16,6 +16,18 @@ def loadJobs():
     for row in result.all():
       jobs.append(row._asdict())
   return jobs
+
+def loadJob(id):
+  with engine.connect() as conn:
+    result = conn.execute(
+      text("select * from jobs where id = :valh"),{'valh':id}
+    ) 
+    jobs = []
+    for row in result.all():
+      jobs.append(row._asdict())
+
+    print(jobs)
+  return jobs
   
 """
 result_all = result.all() 
