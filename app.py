@@ -1,7 +1,6 @@
 from flask import Flask, render_template, jsonify
 from database import loadJobs,loadJob
 app = Flask(__name__)
-JOBS = loadJob(1)
 
 
 
@@ -13,7 +12,7 @@ def hello_world():
 
 @app.route('/api/jobs')
 def list_jobs():
-  JOBS = loadJobs
+  JOBS = loadJobs()
   return jsonify(JOBS)
 
 @app.route('/job/<id>')
