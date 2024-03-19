@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():  
+  JOBS = loadJobs()
   return render_template('home.htm', jobs=JOBS, company_name='AlaaTest')
 
 
