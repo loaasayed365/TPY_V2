@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify
 from database import loadJobs,loadJob
 app = Flask(__name__)
-JOBS = loadJob(2)
+JOBS = loadJob(1)
 
 
 
