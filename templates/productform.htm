@@ -1,0 +1,17 @@
+
+  <form action="/addpro" method="post" enctype="multipart/form-data">
+    <div>
+      <label>Full Name</label>
+      <input type="text" name="productName" placeholder="Product Name"> 
+    </div>
+    <div>
+      <label>Price</label>
+      <input type="text" name="productPrice" placeholder="Product Price"> 
+    </div>
+    <div>  
+      <label>Image</label>
+      <input type="file" name="productImage" placeholder="Product Image"> 
+      <input type="hidden" name="chk" value="1"> 
+    </div>
+    <input type="submit" name="submit">
+  </form>
